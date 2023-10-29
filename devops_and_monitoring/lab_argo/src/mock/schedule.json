@@ -3,32 +3,18 @@
     "day": "monday",
     "lessons": [
       {
-        "name": "Lesson 1",
-        "teacher": "Mr. Smith",
+        "name": "Великі дані для кібербезпеки, лекція",
+        "teacher": "Фесенко Герман Вікторович",
         "room": "R1",
         "start": "08:00",
         "end": "09:35"
       },
       {
-        "name": "Lesson 2",
-        "teacher": "Mr. Smith",
-        "room": "R1",
-        "start": "09:50",
-        "end": "11:25"
-      },
-      {
-        "name": "Lesson 3",
-        "teacher": "Mr. Smith",
+        "name": "DevOps та Continuous Monitoring, практика",
+        "teacher": "Кузнецова Юлія Анатоліївна",
         "room": "R1",
         "start": "11:55",
         "end": "13:30"
-      },
-      {
-        "name": "Lesson 4",
-        "teacher": "Mr. Smith",
-        "room": "R1",
-        "start": "13:45",
-        "end": "15:20"
       }
     ]
   },
@@ -36,29 +22,29 @@
     "day": "tuesday",
     "lessons": [
       {
-        "name": "Lesson 1",
-        "teacher": "Mr. Smith",
+        "name": "Технології DevOps, лекція",
+        "teacher": "Узун Дмитро Дмитрович",
         "room": "R1",
         "start": "08:00",
         "end": "09:35"
       },
       {
-        "name": "Lesson 2",
-        "teacher": "Mr. Smith",
+        "name": "Методи моделювання та оптимізації безпечних комп'ютерних систем, лекція",
+        "teacher": "Морозова Ольга Ігорівна",
         "room": "R1",
         "start": "09:50",
         "end": "11:25"
       },
       {
-        "name": "Lesson 3",
-        "teacher": "Mr. Smith",
+        "name": "Теорія та технології розроб. безпечних розподіл. систем, лекція",
+        "teacher": "Карпенко Андрій Сергійович",
         "room": "R1",
         "start": "11:55",
         "end": "13:30"
       },
       {
-        "name": "Lesson 4",
-        "teacher": "Mr. Smith",
+        "name": "Теорія та технології розроб. безпечних розподіл. систем, практика",
+        "teacher": "Карпенко Андрій Сергійович",
         "room": "R1",
         "start": "13:45",
         "end": "15:20"
@@ -69,29 +55,22 @@
     "day": "wednesday",
     "lessons": [
       {
-        "name": "Lesson 1",
-        "teacher": "Mr. Smith",
-        "room": "R1",
-        "start": "08:00",
-        "end": "09:35"
-      },
-      {
-        "name": "Lesson 2",
-        "teacher": "Mr. Smith",
+        "name": "Методи моделювання та оптимізації безпечних комп'ютерних систем, практика",
+        "teacher": "Морозова Ольга Ігорівна",
         "room": "R1",
         "start": "09:50",
         "end": "11:25"
       },
       {
-        "name": "Lesson 3",
-        "teacher": "Mr. Smith",
+        "name": "DevOps та Continuous Monitoring, лекція",
+        "teacher": "Кузнецова Юлія Анатоліївна",
         "room": "R1",
         "start": "11:55",
         "end": "13:30"
       },
       {
-        "name": "Lesson 4",
-        "teacher": "Mr. Smith",
+        "name": "Великі дані для кібербезпеки, практика",
+        "teacher": "Фесенко Герман Вікторович",
         "room": "R1",
         "start": "13:45",
         "end": "15:20"
@@ -102,32 +81,25 @@
     "day": "thursday",
     "lessons": [
       {
-        "name": "Lesson 1",
-        "teacher": "Mr. Smith",
+        "name": "Технології розроб. та забезпечення функціональної безпеки ІУС, лекція",
+        "teacher": "Скляр Володимир Володимирович",
         "room": "R1",
         "start": "08:00",
         "end": "09:35"
       },
       {
-        "name": "Lesson 2",
-        "teacher": "Mr. Smith",
+        "name": "Організація НД і захист інтелектуальної власності, практика",
+        "teacher": "Піскачов Олександр Іванович",
         "room": "R1",
         "start": "09:50",
         "end": "11:25"
       },
       {
-        "name": "Lesson 3",
-        "teacher": "Mr. Smith",
+        "name": "Організація НД і захист інтелектуальної власності, лекція",
+        "teacher": "Піскачов Олександр Іванович",
         "room": "R1",
         "start": "11:55",
         "end": "13:30"
-      },
-      {
-        "name": "Lesson 4",
-        "teacher": "Mr. Smith",
-        "room": "R1",
-        "start": "13:45",
-        "end": "15:20"
       }
     ]
   },
@@ -135,29 +107,29 @@
     "day": "friday",
     "lessons": [
       {
-        "name": "Lesson 1",
-        "teacher": "Mr. Smith",
+        "name": "Технології DevOps, практика",
+        "teacher": "Узун Дмитро Дмитрович",
         "room": "R1",
         "start": "08:00",
         "end": "09:35"
       },
       {
-        "name": "Lesson 2",
-        "teacher": "Mr. Smith",
+        "name": "Технології DevOps, практика",
+        "teacher": "Узун Дмитро Дмитрович",
         "room": "R1",
         "start": "09:50",
         "end": "11:25"
       },
       {
-        "name": "Lesson 3",
-        "teacher": "Mr. Smith",
+        "name": "Основи маркетингу та ек. обгр. проектів в ІТ-інд., лекція",
+        "teacher": "Бондарєва Тетяна Іванівна",
         "room": "R1",
         "start": "11:55",
         "end": "13:30"
       },
       {
-        "name": "Lesson 4",
-        "teacher": "Mr. Smith",
+        "name": "Основи маркетингу та ек. обгр. проектів в ІТ-інд., практика",
+        "teacher": "Бондарєва Тетяна Іванівна",
         "room": "R1",
         "start": "13:45",
         "end": "15:20"
