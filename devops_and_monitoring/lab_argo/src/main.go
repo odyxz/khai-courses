@@ -1,7 +1,11 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
+	fiberadapter "github.com/awslabs/aws-lambda-go-api-proxy/fiber"
 	"github.com/gofiber/fiber/v2"
 	"io"
 	"lab-argo-app/pkg/entities"
@@ -10,6 +14,8 @@ import (
 	"log"
 	"os"
 )
+
+var fiberLambda *fiberadapter.FiberLambda
 
 func main() {
 	dbFilePath := "./mock/schedule.json"
@@ -34,5 +40,21 @@ func main() {
 
 	app := fiber.New()
 	routes.ScheduleRouter(app, scheduleService)
-	log.Fatal(app.Listen(":3000"))
+	if isLambda() {
+		fiberLambda = fiberadapter.New(app)
+		lambda.Start(Handler)
+	} else {
+		log.Fatal(app.Listen(":3000"))
+	}
+}
+
+func Handler(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+	return fiberLambda.ProxyWithContext(ctx, req)
+}
+
+func isLambda() bool {
+	if lambdaTaskRoot := os.Getenv("LAMBDA_TASK_ROOT"); lambdaTaskRoot != "" {
+		return true
+	}
+	return false
 }
