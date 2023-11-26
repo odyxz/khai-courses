@@ -1,0 +1,46 @@
+name: Lab 5
+
+on:
+  workflow_dispatch:
+
+env:
+  WORKDIR: Theory_and_technologies_of_developing_safe_distribution_systems/lab5//WcfServiceCalc
+  SOLUTION: WcfServiceCalc.sln
+  CSPROJ: WcfServiceCalc/WcfServiceCalc.csproj
+  APP_NAME: khai555smlab4
+
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set version
+      id: version
+      run: |
+        $ver="$(Get-Date -Format "yyyyMMdd-HHmm")"
+        echo "version=$ver" >> $env:GITHUB_OUTPUT
+    - name: Setup msbuild
+      uses: microsoft/setup-msbuild@v1
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1
+      
+    - name: Restore dependencies
+      run: nuget restore ${{ env.SOLUTION }}
+      working-directory: ${{ env.WORKDIR }}
+    - name: Build
+      run: msbuild ${{ env.CSPROJ }} -t:Rebuild -p:Configuration=Release /p:OutDir=artifact
+      working-directory: ${{ env.WORKDIR }}
+
+    - name: Create ZIP artifact
+      run: Compress-Archive -Path ${{ env.WORKDIR }}\WcfServiceCalc\artifact\_PublishedWebsites\WcfServiceCalc\* -Destination artifact.zip
+      
+    - name: Deploy to EB
+      uses: einaregilsson/beanstalk-deploy@v21
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        application_name: lab5
+        environment_name: Lab5-env-1
+        version_label: ${{ steps.version.outputs.version }}
+        region: eu-north-1
+        deployment_package: artifact.zip
