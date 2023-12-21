@@ -24,7 +24,7 @@ jobs:
           registry: ${{ env.REGISTRY_URL }}
           username: ${{ env.REGISTRY_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - uses: odyxz/action-semver-tag-release@1.0.3
+      - uses: 1k-off/action-semver-tag-release@1.0.3
         id: version
         with:
           version: latest
