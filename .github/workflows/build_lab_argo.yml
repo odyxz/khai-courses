@@ -56,9 +56,9 @@ jobs:
         with:
           valueFile: 'lab-argo/values.yaml'
           repository: odyxz/khai-courses-charts
-          branch: master
+          branch: main
           message: 'Update Image Version to ${{ steps.version.outputs.tag }}'
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ github.token }}
           workDir: khai-courses-charts
           changes: |
             {
