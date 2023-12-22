@@ -54,7 +54,7 @@ jobs:
         with:
           repository: odyxz/khai-courses-charts
           path: khai-courses-charts
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
       - name: Update image version in the related chart values
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -62,7 +62,7 @@ jobs:
           repository: odyxz/khai-courses-charts
           branch: main
           message: 'Update Image Version to ${{ steps.version.outputs.tag }}'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           workDir: khai-courses-charts
           changes: |
             {
