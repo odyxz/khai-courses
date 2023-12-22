@@ -13,11 +13,7 @@ env:
   REGISTRY_USERNAME: odyxz
   SERVICE_NAME: khai-courses/lab-argo
 
-permissions:
-  id-token: write
-  contents: read
-  issues: write
-  pull-requests: write
+permissions: write-all
 jobs:
   build:
     runs-on: ubuntu-latest
