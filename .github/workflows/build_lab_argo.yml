@@ -58,7 +58,7 @@ jobs:
           repository: odyxz/khai-courses-charts
           branch: master
           message: 'Update Image Version to ${{ steps.version.outputs.tag }}'
-          token: ${{ steps.generate_token.outputs.token }}
+          token: ${{ secrets.GH_TOKEN }}
           workDir: khai-courses-charts
           changes: |
             {
