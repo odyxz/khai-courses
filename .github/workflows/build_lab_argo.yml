@@ -13,9 +13,13 @@ env:
   REGISTRY_USERNAME: odyxz
   SERVICE_NAME: khai-courses/lab-argo
 
+permissions:
+  id-token: write
+  contents: read
+  issues: write
+  pull-requests: write
 jobs:
   build:
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -58,7 +62,7 @@ jobs:
           repository: odyxz/khai-courses-charts
           branch: main
           message: 'Update Image Version to ${{ steps.version.outputs.tag }}'
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           workDir: khai-courses-charts
           changes: |
             {
